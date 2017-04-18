@@ -23,8 +23,7 @@
     </div>
 </template>
 <script>
-    var token = document.querySelector('#token').getAttribute('value');
-    var config = {headers: {'X-CSRF-TOKEN': token}};
+
     export default {
         data() {
             return {

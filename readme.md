@@ -1,3 +1,18 @@
+
+This is a working fork of http://felicianoprochera.com/simple-task-app-with-laravel-5-3-and-vuejs/ - There were several depreciated call and methods. 
+
+The biggest gotcha's that I ran acrossed.
+<ul>
+    <li>Using Axios - The second arguement in the POST, PATCH call must be an object. I was runnign into errors trying to pass self.task - Using Object.assign({}, self.task) fixed the issue.</li>
+    <li>Moved the model logic to it's own Controller using 'php artisan make:controller App/TaskController --resource' added 'use DB' and 'use App\Task' to it</li>
+    <li>Used Eloquent for all the Task CRUD operations</li>
+    <li>Laravel will throw a 500 error if the Eloquent operations fail. Looking for the best way to debugged this.</li>
+    <li>In the Tasks.vue updated a couple depreciated calls - using mounted(), added a div tag to encapsulate the template, and pointed the app.js Vue Element at #app. </li>
+</ul>
+
+Will update soon with Auth - Passport JWT. 
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

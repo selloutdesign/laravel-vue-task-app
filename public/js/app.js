@@ -41200,8 +41200,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var token = document.querySelector('#token').getAttribute('value');
-var config = { headers: { 'X-CSRF-TOKEN': token } };
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
