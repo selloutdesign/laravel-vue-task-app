@@ -3,6 +3,7 @@ This is a working fork of http://felicianoprochera.com/simple-task-app-with-lara
 
 The biggest gotcha's that I ran acrossed.
 <ul>
+    <li>If you are using MAMP for your Database include DB_SOCKET='/Applications/MAMP/tmp/mysql/mysql.sock' in your .env file</li>
     <li>Using Axios - The second arguement in the POST, PATCH call must be an object. I was runnign into errors trying to pass self.task - Using Object.assign({}, self.task) fixed the issue.</li>
     <li>Moved the model logic to it's own Controller using 'php artisan make:controller App/TaskController --resource' added 'use DB' and 'use App\Task' to it</li>
     <li>Used Eloquent for all the Task CRUD operations</li>
